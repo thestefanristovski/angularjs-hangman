@@ -7,16 +7,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
   <script src="app.js"></script>
+  <link rel="stylesheet" type="text/css" href="app.css">
 </head>
 <body ng-app="HangmanApp" ng-controller="GameController">
 <div>
-  <div>Guess the Word: {{displayWord}}</div>
-  <div>You have {{guesses}} guesses left</div>
-  <div>You have guessed correctly: <span ng-repeat="letter in correctGuesses">{{letter}}</span></div>
-  <div>You have guessed incorrectly: <span ng-repeat="letter in incorrectGuesses">{{letter}}</span></div>
+  <div class="title">
+    <h1>Hangman</h1>
+    <h2>by Stefan Ristovski</h2>
+  </div>
+  <div class="word">
+    <h1>Guess the Word:</h1>
+    <h2>{{displayWord}}</h2>
+  </div>
+  <div style="text-align: center">You have {{guesses}} guesses left</div>
+  <div class="guesses">
+    <table>
+      <td style="color: darkolivegreen"><div style="text-align: center">You have guessed correctly: <span ng-repeat="letter in correctGuesses">{{letter}}</span></div></td>
+      <td style="color: crimson"><div style="text-align: center">You have guessed incorrectly: <span ng-repeat="letter in incorrectGuesses">{{letter}}</span></div></td>
+    </table>
+  </div>
 
   <div>
-    <div>
+    <div style="vertical-align: middle; text-align: center; line-height: 50px;">
       <input type="text" name="guess" ng-model="input.letter">
       <button ng-click="letterChosen()">Submit</button>
     </div>

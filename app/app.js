@@ -58,7 +58,7 @@ app.controller("GameController", ['$scope', '$timeout', function ($scope, $timeo
     }
 
     var found = false;
-    for (var i; i<selectedWord.length; i++) {
+    for (var i =0; i<selectedWord.length; i++) {
       if(selectedWord[i].toUpperCase() == $scope.input.letter.toUpperCase())
       {
         found = true;

@@ -1,25 +1,50 @@
 /* app css stylesheet */
 
-.menu {
-  list-style: none;
-  border-bottom: 0.1em solid black;
-  margin-bottom: 2em;
-  padding: 0 0 0.5em;
+.title h1 {
+  text-align: center;
+  font-size: 35px;
 }
 
-.menu:before {
-  content: "[";
+
+.title h2 {
+  text-align: center;
+  font-size: 15px;
 }
 
-.menu:after {
-  content: "]";
+.word {
+  background-color: coral;
 }
 
-.menu > li {
-  display: inline;
+.word h2 {
+  text-align: center;
+  font-size: 35px;
+  padding-bottom: 50px;
 }
 
-.menu > li + li:before {
-  content: "|";
-  padding-right: 0.3em;
+.word h1 {
+  padding-top: 50px;
+  text-align: center;
+  font-size: 15px;
+}
+
+.guesses {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+table {
+  width: 100%;
+}
+
+input {
+  height: 50px;
+  font-size: 45px;
+  width: 100px;
+  vertical-align: middle;
+}
+
+button {
+  height: 50px;
+  font-size: 20px;
+  vertical-align: middle;
 }

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <title>AngularJS Hangman App by Stefan</title>
+  <meta name="description" content="Hangman app to practice AngularJS">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+  <script src="app.js"></script>
+</head>
+<body ng-app="HangmanApp" ng-controller="GameController">
+<div>
+  <div>Guess the Word: {{displayWord}}</div>
+  <div>You have {{guesses}} guesses left</div>
+  <div>You have guessed correctly: <span ng-repeat="letter in correctGuesses">{{letter}}</span></div>
+  <div>You have guessed incorrectly: <span ng-repeat="letter in incorrectGuesses">{{letter}}</span></div>
+
+  <div>
+    <div>
+      <input type="text" name="guess" ng-model="input.letter">
+      <button ng-click="letterChosen()">Submit</button>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
